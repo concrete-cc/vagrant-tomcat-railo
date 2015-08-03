@@ -38,6 +38,12 @@ Vagrant.configure("2") do |config|
 	config.vm.provision :puppet do |puppet|
 		puppet.module_path = "modules"
 		puppet.manifests_path = "manifests"
+		puppet.manifest_file  = "sqlite.pp"
+	end
+
+	config.vm.provision :puppet do |puppet|
+		puppet.module_path = "modules"
+		puppet.manifests_path = "manifests"
 		puppet.manifest_file  = "nginx.pp"
 	end
 

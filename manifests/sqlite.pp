@@ -7,7 +7,7 @@ exec { 'apt-update':
 
 # get sqlite
 package { 'sqlite3':
-  ensure  => '3.7.9-2ubuntu1.1',
+  ensure  => '3.7.9-2ubuntu1',
   require => Exec['apt-update'],
 }
 
